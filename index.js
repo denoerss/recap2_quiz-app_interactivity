@@ -1,3 +1,4 @@
 // phew… not a lot going on here. Please add some code!
 
-console.clear(); 
+console.clear();
+//hallo
