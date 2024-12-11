@@ -23,14 +23,35 @@ form.addEventListener("submit", (event) => {
   console.log("NEW TAG_", newTag);
 
   // Generate all DOM elements for a card
+  // Add classes to card elements
+
   const cardListItem = document.createElement("li");
+  cardListItem.classList.add("card-list__item");
+
   const card = document.createElement("article");
+  card.classList.add("class");
+
   const cardQuestion = document.createElement("h2");
+  cardQuestion.classList.add("card__question");
+
   const cardButtonAnswer = document.createElement("button");
+  cardButtonAnswer.classList.add("card__button-answer");
+
   const cardAnswer = document.createElement("p");
+  cardAnswer.classList.add("card__answer");
+
   const cardTagList = document.createElement("ul");
+  cardTagList.classList.add("card__tag-list");
+
   const cardTagListItem = document.createElement("li");
+  cardTagListItem.classList.add("card_tag-list-item");
+
   const cardButtonBookmark = document.createElement("div");
+  cardButtonBookmark.classList.add("card__button-bookmark");
+
   const bookmarkButton = document.createElement("button");
+  bookmarkButton.classList.add("bookmark");
+
   const bookmarkIcon = document.createElement("svg");
+  bookmarkIcon.classList.add("bookmark__icon");
 });
