@@ -1,0 +1,24 @@
+.form {
+  padding: 2rem;
+  margin: 8rem auto;
+  /* ^ bessere lösung? */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  word-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.form__submit {
+  background: var(--secondary);
+  color: var(--white);
+  border: none;
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 1rem;
+}
+
+.form__submit:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
