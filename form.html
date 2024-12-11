@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./index.js" defer></script>
+    <script src="./components/form/form.js" defer></script>
   </head>
 
   <body>
     <header class="header">
-      <h1 class="header__title">Quiz-App</h1>
+      <h1 class="header__title">Submit</h1>
     </header>
 
     <main>
       <form class="form" data-js="form">
-        <label for="your-question">Your question:</label>
-        <textarea name="your-question" id="your-question"></textarea>
+        <label for="question">Your question:</label>
+        <textarea name="question" id="question"></textarea>
         <br />
-        <label for="your-answer">Your answer:</label>
-        <textarea name="your-answer" id="your-answer"></textarea>
+
+        <label for="answer">Your answer:</label>
+        <textarea name="answer" id="answer"></textarea>
         <br />
+
         <label for="tag">Tag:</label>
-        <input type="text" id="tag" />
+        <input type="text" name="tag" id="tag" />
         <br />
+
         <button type="submit" class="form__submit">Submit</button>
       </form>
     </main>
 
     <nav class="navigation">
-      <ul class="navigation__list" data-js="navigation-list">
-        <li class="navigation__list-item">
+      <ul class="navigation__list">
+        <li class="navigation__list-item" data-js="nav-item">
           <a
             class="navigation__link"
             href="index.html"
@@ -49,7 +52,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item" data-js="nav-item">
           <a
             class="navigation__link"
             href="bookmarks.html"
@@ -67,7 +70,10 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item navigation__list-item--active">
+        <li
+          class="navigation__list-item navigation__list-item--active"
+          data-js="nav-item"
+        >
           <a
             class="navigation__link"
             href="form.html"
@@ -91,7 +97,7 @@
             </svg>
           </a>
         </li>
-        <li class="navigation__list-item">
+        <li class="navigation__list-item" data-js="nav-item">
           <a
             class="navigation__link"
             href="profile.html"
