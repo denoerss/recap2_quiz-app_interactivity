@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -22,17 +23,26 @@
               In the Kingdom Heart series who provides the english voice for
               Master Eraqus?
             </h2>
-            <button class="card__button-answer" type="button">
+            <button
+              class="card__button-answer"
+              type="button"
+              data-js="button-answer"
+            >
               Show answer
             </button>
-            <p class="card__answer">Mark Hamill</p>
+            <p class="card__answer" data-js="card-answer">Mark Hamill</p>
             <ul class="card__tag-list">
               <li class="card__tag-list-item">#kingdomheart</li>
               <li class="card__tag-list-item">#mastereraqus</li>
               <li class="card__tag-list-item">#english voices</li>
             </ul>
             <div class="card__button-bookmark">
-              <button class="bookmark" aria-label="bookmark" type="button">
+              <button
+                class="bookmark"
+                aria-label="bookmark"
+                type="button"
+                data-js="button-bookmark"
+              >
                 <svg
                   class="bookmark__icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,10 +65,16 @@
               Daniel Radcliffe became a global star in the film industry due to
               his performance in which film franchise?
             </h2>
-            <button class="card__button-answer" type="button">
+            <button
+              class="card__button-answer"
+              type="button"
+              data-js="button-answer"
+            >
               Show answer
             </button>
-            <p class="card__answer card__answer--active">Harry Potter</p>
+            <p class="card__answer card__answer--active" data-js="card-answer">
+              Harry Potter
+            </p>
             <ul class="card__tag-list">
               <li class="card__tag-list-item">#danielradcliffe</li>
               <li class="card__tag-list-item">#hewhomustnotbenamed</li>
@@ -69,6 +85,7 @@
                 class="bookmark bookmark--active"
                 aria-label="bookmark"
                 type="button"
+                data-js="button-bookmark"
               >
                 <svg
                   class="bookmark__icon"
@@ -92,7 +109,11 @@
               Which former US president was nicknamed &quot;Teddy&quot; after he
               refused to shoot a defenseless black bear?
             </h2>
-            <button class="card__button-answer" type="button">
+            <button
+              class="card__button-answer"
+              type="button"
+              data-js="button-answer"
+            >
               Show answer
             </button>
             <p class="card__answer">Theodore Roosevelt</p>
@@ -102,7 +123,12 @@
               <li class="card__tag-list-item">#teddybear</li>
             </ul>
             <div class="card__button-bookmark">
-              <button class="bookmark" aria-label="bookmark" type="button">
+              <button
+                class="bookmark"
+                aria-label="bookmark"
+                type="button"
+                data-js="button-bookmark"
+              >
                 <svg
                   class="bookmark__icon"
                   xmlns="http://www.w3.org/2000/svg"
