@@ -13,12 +13,24 @@ form.addEventListener("submit", (event) => {
   console.log("FORM DATA_", formData);
 
   // Save all entered data from the input fields in variables
-  const question = formData.get("question");
-  const answer = formData.get("answer");
-  const tag = formData.get("tag");
+  const newQuestion = formData.get("question");
+  const newAnswer = formData.get("answer");
+  const newTag = formData.get("tag");
 
   // Log all collected data
-  console.log("QUESTION_", question);
-  console.log("ANSWER_", answer);
-  console.log("TAG_", tag);
+  console.log("NEW QUESTION_", newQuestion);
+  console.log("NEW ANSWER_", newAnswer);
+  console.log("NEW TAG_", newTag);
+
+  // Generate all DOM elements for a card
+  const cardListItem = document.createElement("li");
+  const card = document.createElement("article");
+  const cardQuestion = document.createElement("h2");
+  const cardButtonAnswer = document.createElement("button");
+  const cardAnswer = document.createElement("p");
+  const cardTagList = document.createElement("ul");
+  const cardTagListItem = document.createElement("li");
+  const cardButtonBookmark = document.createElement("div");
+  const bookmarkButton = document.createElement("button");
+  const bookmarkIcon = document.createElement("svg");
 });
