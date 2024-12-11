@@ -7,6 +7,6 @@ const bookmarkButton = document.querySelector('[data-js="bookmark"]');
 
 // add eventListener
 bookmarkButton.addEventListener("click", () => {
-  bookmarkButton.classList.toggle("bookmark--activ");
+  bookmarkButton.classList.toggle("bookmark--active");
   console.log(bookmarkButton);
 });
