@@ -30,7 +30,7 @@ form.addEventListener("submit", (event) => {
   cardListItem.classList.add("card-list__item");
 
   const card = document.createElement("article");
-  card.classList.add("class");
+  card.classList.add("card");
 
   const cardQuestion = document.createElement("h2");
   cardQuestion.classList.add("card__question");
@@ -48,7 +48,7 @@ form.addEventListener("submit", (event) => {
   cardTagList.classList.add("card__tag-list");
 
   const cardTagListItem = document.createElement("li");
-  cardTagListItem.classList.add("card_tag-list-item");
+  cardTagListItem.classList.add("card__tag-list-item");
   cardTagListItem.textContent = newTag;
 
   const cardButtonBookmark = document.createElement("div");
@@ -59,4 +59,17 @@ form.addEventListener("submit", (event) => {
 
   const bookmarkIcon = document.createElement("svg");
   bookmarkIcon.classList.add("bookmark__icon");
+
+  // Build DOM structure
+  document.body.append(cardListItem);
+  cardListItem.append(card);
+  card.append(
+    cardQuestion,
+    cardButtonAnswer,
+    cardAnswer,
+    cardTagList,
+    cardButtonBookmark
+  );
+  cardTagList.append(cardTagListItem, cardTagListItem, cardTagListItem);
+  cardButtonBookmark.append(bookmarkButton, bookmarkIcon);
 });
