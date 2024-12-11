@@ -23,7 +23,8 @@ form.addEventListener("submit", (event) => {
   console.log("NEW TAG_", newTag);
 
   // Generate all DOM elements for a card
-  // Add classes to card elements
+  // Add classes to DOM elements
+  // Insert the form's data as text into DOM delements
 
   const cardListItem = document.createElement("li");
   cardListItem.classList.add("card-list__item");
@@ -33,18 +34,22 @@ form.addEventListener("submit", (event) => {
 
   const cardQuestion = document.createElement("h2");
   cardQuestion.classList.add("card__question");
+  cardQuestion.textContent = newQuestion;
 
   const cardButtonAnswer = document.createElement("button");
   cardButtonAnswer.classList.add("card__button-answer");
+  cardButtonAnswer.textContent = "Show answer";
 
   const cardAnswer = document.createElement("p");
   cardAnswer.classList.add("card__answer");
+  cardAnswer.textContent = newAnswer;
 
   const cardTagList = document.createElement("ul");
   cardTagList.classList.add("card__tag-list");
 
   const cardTagListItem = document.createElement("li");
   cardTagListItem.classList.add("card_tag-list-item");
+  cardTagListItem.textContent = newTag;
 
   const cardButtonBookmark = document.createElement("div");
   cardButtonBookmark.classList.add("card__button-bookmark");
