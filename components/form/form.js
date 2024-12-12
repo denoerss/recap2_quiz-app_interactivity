@@ -61,7 +61,6 @@ form.addEventListener("submit", (event) => {
   bookmarkIcon.classList.add("bookmark__icon");
 
   // Build DOM structure
-  document.body.append(cardListItem);
   cardListItem.append(card);
   card.append(
     cardQuestion,
@@ -70,6 +69,11 @@ form.addEventListener("submit", (event) => {
     cardTagList,
     cardButtonBookmark
   );
-  cardTagList.append(cardTagListItem, cardTagListItem, cardTagListItem);
+  cardTagList.append(cardTagListItem);
   cardButtonBookmark.append(bookmarkButton, bookmarkIcon);
+
+  // Append card to page, directly below the form
+  const formContainer = form.parentNode; // parent element of form (<main></main>)
+  formContainer.insertBefore(cardListItem, form.nextSibling);
+  //                         ^ insert cardListItem, before nextSibling of form (<nav></nav>)
 });
