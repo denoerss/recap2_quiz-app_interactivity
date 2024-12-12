@@ -14,9 +14,9 @@ form.addEventListener("submit", (event) => {
   console.log("FORM DATA_", formData);
 
   // Save all entered data from the input fields in variables
-  const newQuestion = formData.get("question");
-  const newAnswer = formData.get("answer");
-  const newTag = formData.get("tag");
+  const newQuestion = formData.get("question-area");
+  const newAnswer = formData.get("answer-area");
+  const newTag = formData.get("tag-input");
 
   // Log all collected data
   console.log("NEW QUESTION_", newQuestion);
@@ -81,10 +81,36 @@ form.addEventListener("submit", (event) => {
 
 // 4. FORM FIELD TEXT COUNTER
 
-// Add a maxlength attribute to form fields
+// FOR QUESTION AREA
+const questionCounter = document.createElement("span");
+questionCounter.classList.add("question-counter");
+questionCounter.setAttribute("data-js", "question-counter");
+questionCounter.textContent = "150 characters left";
 
-const textareaQuestion = document.querySelector('[data-js="question"]');
-textareaQuestion.setAttribute("maxlength", "150");
+const questionArea = document.querySelector('[data-js="question-area"]');
+questionArea.insertAdjacentElement("afterend", questionCounter);
+questionArea.setAttribute("maxlength", "150");
+const maxInputLength = questionArea.getAttribute("maxlength");
 
-const textareaAnswer = document.querySelector('[data-js="answer"]');
-textareaAnswer.setAttribute("maxlength", "150");
+questionArea.addEventListener("input", (event) => {
+  const questionLength = event.target.value.length;
+  const leftCharactersQuestion =
+    Number(maxInputLength) - Number(questionLength);
+  questionCounter.textContent = `${leftCharactersQuestion} characters left`;
+});
+
+// FOR ANSWER AREA
+const answerCounter = document.createElement("span");
+answerCounter.classList.add("answer-counter");
+answerCounter.setAttribute("data-js", "answer-counter");
+answerCounter.textContent = "150 characters left";
+
+const answerArea = document.querySelector('[data-js="answer-area"]');
+answerArea.insertAdjacentElement("afterend", answerCounter);
+answerArea.setAttribute("maxlength", "150");
+
+answerArea.addEventListener("input", (event) => {
+  const answerLength = event.target.value.length;
+  const leftCharactersAnswer = Number(maxInputLength) - Number(answerLength);
+  answerCounter.textContent = `${leftCharactersAnswer} characters left`;
+});
