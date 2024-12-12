@@ -14,11 +14,27 @@
   color: var(--white);
   border: none;
   display: block;
-  margin: 0 auto 2rem auto;
+  margin: 0.5rem auto 2rem auto;
   padding: 1rem;
 }
 
 .form__submit:hover {
   opacity: 0.75;
   cursor: pointer;
+}
+
+.char-counter {
+  text-align: right;
+  font-size: 75%;
+}
+
+textarea#question,
+textarea#answer {
+  padding: 0.75rem;
+  min-height: 5.5rem;
+}
+
+input#tag {
+  padding: 0.75rem;
+  min-height: 0.75rem;
 }

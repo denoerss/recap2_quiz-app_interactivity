@@ -17,15 +17,17 @@
     <main>
       <form class="form" data-js="form">
         <label for="question">Your question:</label>
-        <textarea name="question" id="question"></textarea>
-        <br />
+        <textarea
+          name="question"
+          id="question"
+          data-js="question-area"
+        ></textarea>
 
         <label for="answer">Your answer:</label>
-        <textarea name="answer" id="answer"></textarea>
-        <br />
+        <textarea name="answer" id="answer" data-js="answer-area"></textarea>
 
         <label for="tag">Tag:</label>
-        <input type="text" name="tag" id="tag" />
+        <input type="text" name="tag" id="tag" data-js="tag-input" />
         <br />
 
         <button type="submit" class="form__submit">Submit</button>
