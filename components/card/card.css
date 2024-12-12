@@ -35,6 +35,7 @@
 
 .card__answer--active {
   display: block;
+  font-style: italic;
 }
 
 .card__button-bookmark {
@@ -46,7 +47,7 @@
 .card__tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 4px;
   margin-top: 20px;
 }
 

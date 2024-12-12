@@ -27,3 +27,14 @@
   text-align: right;
   font-size: 75%;
 }
+
+textarea#question,
+textarea#answer {
+  padding: 0.75rem;
+  min-height: 5.5rem;
+}
+
+input#tag {
+  padding: 0.75rem;
+  min-height: 0.75rem;
+}
