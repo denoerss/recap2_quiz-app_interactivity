@@ -1,4 +1,5 @@
 console.clear();
+// 3. CREATE NEW CARDS
 
 // Select form element
 const form = document.querySelector('[data-js="form"]');
@@ -77,3 +78,13 @@ form.addEventListener("submit", (event) => {
   formContainer.insertBefore(cardListItem, form.nextSibling);
   //                         ^ insert cardListItem, before nextSibling of form (<nav></nav>)
 });
+
+// 4. FORM FIELD TEXT COUNTER
+
+// Add a maxlength attribute to form fields
+
+const textareaQuestion = document.querySelector('[data-js="question"]');
+textareaQuestion.setAttribute("maxlength", "150");
+
+const textareaAnswer = document.querySelector('[data-js="answer"]');
+textareaAnswer.setAttribute("maxlength", "150");
