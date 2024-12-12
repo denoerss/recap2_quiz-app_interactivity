@@ -81,36 +81,27 @@ form.addEventListener("submit", (event) => {
 
 // 4. FORM FIELD TEXT COUNTER
 
-// FOR QUESTION AREA
-const questionCounter = document.createElement("span");
-questionCounter.classList.add("question-counter");
-questionCounter.setAttribute("data-js", "question-counter");
-questionCounter.textContent = "150 characters left";
+function charCounter(textareaSelector) {
+  //set max length
+  const maxLength = 150;
 
-const questionArea = document.querySelector('[data-js="question-area"]');
-questionArea.insertAdjacentElement("afterend", questionCounter);
-questionArea.setAttribute("maxlength", "150");
-const maxInputLength = questionArea.getAttribute("maxlength");
+  // create character counter
+  const charCounter = document.createElement("span");
+  charCounter.classList.add("char-counter");
+  charCounter.textContent = `${maxLength} characters left`;
 
-questionArea.addEventListener("input", (event) => {
-  const questionLength = event.target.value.length;
-  const leftCharactersQuestion =
-    Number(maxInputLength) - Number(questionLength);
-  questionCounter.textContent = `${leftCharactersQuestion} characters left`;
-});
+  // select textarea, set max length, insert counter
+  const textarea = document.querySelector(textareaSelector);
+  textarea.setAttribute("maxlength", maxLength);
+  textarea.insertAdjacentElement("afterend", charCounter);
 
-// FOR ANSWER AREA
-const answerCounter = document.createElement("span");
-answerCounter.classList.add("answer-counter");
-answerCounter.setAttribute("data-js", "answer-counter");
-answerCounter.textContent = "150 characters left";
+  // calculate and update left characters
+  textarea.addEventListener("input", (event) => {
+    const charsLeft = maxLength - event.target.value.length;
+    charCounter.textContent = `${charsLeft} characters left`;
+  });
+}
 
-const answerArea = document.querySelector('[data-js="answer-area"]');
-answerArea.insertAdjacentElement("afterend", answerCounter);
-answerArea.setAttribute("maxlength", "150");
-
-answerArea.addEventListener("input", (event) => {
-  const answerLength = event.target.value.length;
-  const leftCharactersAnswer = Number(maxInputLength) - Number(answerLength);
-  answerCounter.textContent = `${leftCharactersAnswer} characters left`;
-});
+// call character counters
+const questionCounter = charCounter('[data-js="question-area"]');
+const answerCounter = charCounter('[data-js="answer-area"]');

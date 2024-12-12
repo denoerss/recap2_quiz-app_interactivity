@@ -23,8 +23,7 @@
   cursor: pointer;
 }
 
-.question-counter,
-.answer-counter {
+.char-counter {
   text-align: right;
   font-size: 75%;
 }
